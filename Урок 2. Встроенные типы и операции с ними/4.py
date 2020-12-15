@@ -11,3 +11,8 @@ for i in range(len(a)):
 # Через enumerate
 for ind, el in enumerate(a, 1):
     print(f'{ind}. {el:<.10}')
+
+
+#  Новый способ с использованием среза
+for i in range(len(a)):
+    print(f'{i + 1}. {a[i][:10]}')

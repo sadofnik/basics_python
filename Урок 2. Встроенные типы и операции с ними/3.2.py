@@ -10,3 +10,15 @@ if 1 <= a <= 12:
             print(k)
 else:
     print("Такого месяца нет.")
+
+
+# Попробовал оптимизировать согласно комментария
+season_t = {'1,2,12': 'Зима', '3,4,5':'Весна','6,7,8':'Лето','9,10,11':'Осень'}
+
+b = input("Введите целое число от 1 до 12: ")
+for key_list in season_t.keys():
+    if b in key_list:
+        print(season_t.get(key_list))
+        break
+else:
+    print("Такого месяца нет.")
