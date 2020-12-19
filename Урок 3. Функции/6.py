@@ -7,16 +7,18 @@
 
 
 def int_func(word):
-    c = []
-    for i in range(len(word)):
-        c.append(f'{word[i][0].upper() + word[i][1:]}')
-    return ' '.join(c)
+    return f'{word[0].upper() + word[1:]}'
 
 
-a = input('Введите слово:\n').split()
+def words_func(b):
+    word = []
+    for i in range(len(b)):
+        word.append(int_func(b[i]))
+    return ' '.join(word)
 
+
+a = input('Введите слово:\n')
 print(int_func(a))
 
 b = input('Ведите несколько слов:\n').split()
-
-print(int_func(b))
+print(words_func(b))
